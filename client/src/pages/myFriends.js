@@ -34,6 +34,8 @@ function MyFriends() {
         event.preventDefault();
         console.log(formObject.friend_email)
 
+        alert(`${formObject.friend_email} added to ${currentTrip.trip_name}`)
+
         if (formObject.friend_email) {
             API.inviteFriend(formObject.friend_email)
                 .then(res => addAssociation(res.data[0].id))

@@ -77,9 +77,23 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   isUserAdmin: function (req, res) {
+    inputData = req.params.id
+    console.log("this is inputData", inputData)
+
+    function splitToDigit(n){
+      return (n + '').split('').map((i) => { return Number(i); })
+    }
+    
+    splitInputData = splitToDigit(inputData);
+    user_id=splitInputData[0];
+    trip_id=splitInputData[1];
+
     db.Travellers
       .findOne({
-        where: req.body
+        where: {
+          trip_id: trip_id,
+          user_id: user_id
+        }
       })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -25,7 +25,7 @@ export default {
     return axios.put("/api/votes/", voteData)
   },
   isUserAdmin: function (specificTripData){
-    return axios.get("/api/votes/", specificTripData)
+    return axios.get("/api/votes/" + specificTripData.user_id + specificTripData.trip_id)
   },
   inviteFriend: function (friendEmailData){
     return axios.post("/api/friends/newFriend/" + friendEmailData)
