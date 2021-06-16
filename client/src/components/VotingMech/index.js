@@ -40,7 +40,9 @@ const VotingMech = (props) => {
 
     function onUpvoteDate(data, diff) {
         ;
-        console.log(data)
+        console.log(`this is the data ${data}`)
+        console.log(`this is the difference ${diff.item.count}`)
+
         API.setVote(
             {
                 voteData: data,
@@ -172,7 +174,8 @@ const VotingMech = (props) => {
                         onClose={onCloseDate}
                         onReset={onResetDate}
                         isAdmin={isAdmin.admin}
-                        clientId={currentUser.id} />
+                        // clientId={currentUser.id}
+                         />
                 </div>
                 <div className="card">
                     <h3>Locations:</h3>
@@ -181,7 +184,8 @@ const VotingMech = (props) => {
                         onClose={onCloseLocation}
                         onReset={onResetLocation}
                         isAdmin={isAdmin.admin}
-                        clientId={currentUser.id} />
+                        // clientId={currentUser.id} 
+                        />
                 </div>
                 <div className="card">
                     <h3>Activities:</h3>
@@ -190,7 +194,8 @@ const VotingMech = (props) => {
                         onClose={onCloseActivity}
                         onReset={onResetActivity}
                         isAdmin={isAdmin.admin}
-                        clientId={currentUser.id} />
+                        // clientId={currentUser.id}
+                         />
                 </div>
                 <div className="card">
                     <h3>Mode of Transport:</h3>
@@ -199,7 +204,8 @@ const VotingMech = (props) => {
                         onClose={onCloseTransport}
                         onReset={onResetTransport}
                         isAdmin={isAdmin.admin}
-                        clientId={currentUser.id} />
+                        // clientId={currentUser.id} 
+                        />
                 </div>
             </div>
         )
