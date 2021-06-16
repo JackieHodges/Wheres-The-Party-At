@@ -12,7 +12,7 @@ return (
   <div className="grid-x grid-margin-x small-up-2 medium-up-3" data-equalizer data-equalize-on="medium">
     <div className="cell">
       <div className="card">
-        <img src="https://lh3.googleusercontent.com/proxy/r8o6PFgexBaRuKbP4UPoXSc4LMuEHP6Re8g02XkStTBvA-sCKAqRH0FYDcYXPLuPwS3ql9jdUHnG4L6tID35InUa7XsVASrmTw" className="howimage"></img>
+        <img src="https://lh3.googleusercontent.com/proxy/nqB1vNpcN9W9BJ2L2wnkLBlTHFmZCV9aBf1cMvMZ-5MZ-j50p1ITr0k-oFtG5EQc8ToSwqO4FZgliv1OQz35HX7E4cAV-PNnkA" className="howimage"></img>
         <div className="" data-equalizer-watch>
         <h4 align="center">Create new trips!</h4>
           <p align="center">Start by loggin in and using our Create New Trip feature to start planning your next trip!</p>
