@@ -38,16 +38,6 @@ const VotingMech = (props) => {
 
     console.log(`this is the admin data ${isAdmin.admin}`)
 
-    // function onCreateDate(data) {
-    //     API.setVote(
-    //         {
-    //             voteData: data,
-    //             trip: currentTrip.id
-    //         }
-    //     )
-    //         .then(res => console.log(res.data))
-    // }
-
     function onUpvoteDate(data, diff) {
         ;
         console.log(data)
@@ -80,16 +70,6 @@ const VotingMech = (props) => {
             .then(res => console.log(res.data))
     }
 
-    // function onCreateLocation(data) {
-    //     API.setVote(
-    //         {
-    //             locationData: data,
-    //             trip: currentTrip.id
-    //         }
-    //     )
-    //         .then(res => console.log(res.data))
-    // }
-
     function onUpvoteLocation(data, diff) {
         console.log(data)
         API.setVote(
@@ -121,16 +101,6 @@ const VotingMech = (props) => {
             .then(res => console.log(res.data))
     }
 
-    // function onCreateActivity(data) {
-    //     API.setVote(
-    //         {
-    //             activityData: data,
-    //             trip: currentTrip.id
-    //         }
-    //     )
-    //         .then(res => console.log(res.data))
-    // }
-
     function onUpvoteActivity(data, diff) {
         console.log(data)
         API.setVote(
@@ -161,16 +131,6 @@ const VotingMech = (props) => {
         )
             .then(res => console.log(res.data))
     }
-
-    // function onCreateTransport(data) {
-    //     API.setVote(
-    //         {
-    //             transportData: data,
-    //             trip: currentTrip.id
-    //         }
-    //     )
-    //         .then(res => console.log(res.data))
-    // }
 
     function onUpvoteTransport(data, diff) {
         console.log(data)
@@ -208,7 +168,6 @@ const VotingMech = (props) => {
                 <div className="card" >
                     <h3>Dates:</h3>
                     <ReactVote data={currentVote.dateVote}
-                        // onCreate={onCreateDate}
                         onUpvote={onUpvoteDate}
                         onClose={onCloseDate}
                         onReset={onResetDate}
@@ -218,7 +177,6 @@ const VotingMech = (props) => {
                 <div className="card">
                     <h3>Locations:</h3>
                     <ReactVote data={currentVote.locationVote}
-                        // onCreate={onCreateLocation}
                         onUpvote={onUpvoteLocation}
                         onClose={onCloseLocation}
                         onReset={onResetLocation}
@@ -228,7 +186,6 @@ const VotingMech = (props) => {
                 <div className="card">
                     <h3>Activities:</h3>
                     <ReactVote data={currentVote.activityVote}
-                        // onCreate={onCreateActivity}
                         onUpvote={onUpvoteActivity}
                         onClose={onCloseActivity}
                         onReset={onResetActivity}
@@ -238,7 +195,6 @@ const VotingMech = (props) => {
                 <div className="card">
                     <h3>Mode of Transport:</h3>
                     <ReactVote data={currentVote.transportVote}
-                        // onCreate={onCreateTransport}
                         onUpvote={onUpvoteTransport}
                         onClose={onCloseTransport}
                         onReset={onResetTransport}
